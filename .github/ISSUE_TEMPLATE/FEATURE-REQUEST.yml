@@ -1,32 +1,35 @@
-name: "\U0001F680 New feature proposal"
-description: Suggest an idea
-labels: ['feature request']
+name: 💡 Feature request
+description: Got a suggestion for a new idea/feature ?
+labels: ["enhancement"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thanks for your interest in the project and taking the time to fill out this feature report!
   - type: textarea
-    id: feature-description
+    id: summary
     attributes:
-      label: What problem is this solving
-      description: 'A clear and concise description of what the problem is. Ex. when using the function X we cannot do Y.'
+      label: Summary
+      description: A brief explanation of the feature.
     validations:
       required: true
+
   - type: textarea
-    id: proposed-solution
+    id: whatsnew
     attributes:
-      label: Proposed solution
-      description: 'A clear and concise description of what you want to happen with an API proposal when applicable'
+      label: What's new?
+      description: If the proposal involves a new component or a redesign of a previous component.
     validations:
       required: true
+
   - type: textarea
-    id: alternative
+    id: motivation
     attributes:
-      label: Describe alternatives you've considered
-      description: A clear and concise description of any alternative solutions or features you've considered.
-  - type: markdown
+      label: Motivation
+      description: Why are we doing this? What use cases does it support? What is the expected outcome?
+    validations:
+      required: true
+
+  - type: textarea
+    id: extrainfo
     attributes:
-      value: |
-        ## Before creating a feature request make sure that:
-        - This hasn't been [requested before](https://github.com/vuejs/pinia/issues).
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false

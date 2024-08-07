@@ -1,49 +1,82 @@
-name: "\U0001F41E Bug report"
-description: Report an issue
+name: 🐛 Bug report
+description: Something isn't working as expected? Here is the right place to report.
+labels: ["bug"]
+
 body:
   - type: markdown
     attributes:
+      value: Please fill out each section below. This info allows maintainers to diagnose (and fix!) your issue as quickly as possible. Before opening a new issue, please search existing issues [here](https://github.com/saadpasta/developerFolio/issues).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: reproduction
-    attributes:
-      label: Reproduction
-      description: "If possible, provide a boiled down editable reproduction using [this playground](https://play.pinia.vuejs.org), a CodeSandbox or a GitHub repository based on [this template](https://github.com/piniajs/bug-report). A failing unit test is even better! Otherwise provide as much information as possible to reproduce the problem. There are other [examples of different environments](https://github.com/piniajs?q=example&type=source) that can be used as a bug reproduction. If no reproduction is provided and the information is not enough to reproduce the problem, we won't be able to give it a look **and the issue will be converted into a question and moved to discussions**."
-      placeholder: Reproduction
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
     validations:
       required: true
+
   - type: textarea
-    id: steps
-    attributes:
-      label: Steps to reproduce the bug
-      description: |
-        1. Click on ...
-        2. Check log
-    validations:
-      required: true
-  - type: textarea
-    id: expected-behavior
+    id: expected
     attributes:
       label: Expected behavior
       description: A clear and concise description of what you expected to happen.
     validations:
       required: true
-  - type: textarea
-    id: actual-behavior
+
+  - type: input
     attributes:
-      label: Actual behavior
-      description: 'A clear and concise description of what actually happens.'
+      label: Is this responsiveness Issue
+      description: Write YES/NO in the box below
     validations:
       required: true
+
   - type: textarea
-    id: other-info
+    id: screenshots
     attributes:
-      label: Additional information
-      description: Add any other context about the problem here.
-  - type: markdown
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+
+  - type: textarea
     attributes:
+      label: Desktop
+      description: Please complete the following information
       value: |
-        ## Before creating an issue make sure that:
-        - This hasn't been [reported before](https://github.com/vuejs/pinia/issues).
-        - The provided reproduction is a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) of the bug **with no external dependencies (e.g. vuetify)**
+        - OS: [e.g. iOS]
+        - Browser: [e.g. chrome, safari]
+        - Version: [e.g. 22]
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Smartphones
+      description: Please complete the following information
+      value: |
+        - Device: [e.g. iPhone6]
+        - OS: [e.g. iOS8.1]
+        - Browser [e.g. stock browser, safari]
+        - Version [e.g. 22]
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
