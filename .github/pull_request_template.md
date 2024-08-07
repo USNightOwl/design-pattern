@@ -1,28 +1,32 @@
-## What
+# Pull Request Template
 
-What does the PR do?
-Is it a bug fix, new feature, refactor, or something else?
+The code review checklist below is used for all pull requests.
 
-## Why
+1.  Review the list before submitting your pull request.
+2.  Leave the list intact for the code reviewer's use.
 
-Why this PR is needed?
+## Description
 
-## How
+Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-How is it doing what it does?
-How to test, how to integrate, any relevant compromises, etc.?
+Fixes # (issue)
 
-### Changes details
+## Type of change
 
-- Detail one
-- Detail two
-  ...
+<!-- Please delete options that are not relevant.-->
 
-## Missed anything?
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] This change requires a documentation update
 
-- [ ] Explained the purpose of this PR.
-- [ ] Self reviewed the PR.
-- [ ] Added or updated test cases.
-- [ ] Informed of breaking changes, testing and migrations (if applicable).
-- [ ] Updated documentation (if applicable).
-- [ ] Attached screenshots (if applicable).
+## Checklist
+
+- [ ] Latest code from master has been merged into the pull request branch
+- [ ] Code is camelCased
+- [ ] No linting issues
+- [ ] Automated tests exist and pass
+
+## Thanks!
+
+:heart:
