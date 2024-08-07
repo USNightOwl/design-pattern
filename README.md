@@ -12,3 +12,6 @@
 |||Strategy|
 |||Template Method|
 |||Visitor|
+
+![image](https://res.cloudinary.com/hunghg255/image/upload/v1680843113/blog/dp1_eatv0w.png)
+![image](https://res.cloudinary.com/hunghg255/image/upload/v1680843113/blog/dp2_cntw81.png)
