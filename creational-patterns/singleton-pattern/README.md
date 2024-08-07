@@ -91,3 +91,27 @@ public class ThreadSafeSingleton {
      }
 ```
 
+Cách đơn gảin nhất là chúng ta gọi phương thức synchronized của hàm getInstance() và như vậy hệ thống đảm bảo rằng tại cùng một thời điểm chỉ có thể có 1 luồng có thể truy cập vào hàm getInstance(), và đảm bảo rằng chỉ có duy nhất 1 thể hiện của class Tuy nhiên một menthod synchronized sẽ chạy rất chậm và tốn hiệu năng vì vậy chúng ta cần cải tiến nó đi 1 chút.
+
+### Thread Safe Upgrade initialization
+Tạm gọi nó là Thread Safe Upgrade initialization, thay vì chúng ta Thread Safe cả menthod getInstance() chúng ta chỉ Thread Safe một đoạn mã quan trong
+
+```java
+public class ThreadSafeSingleton {
+    private static ThreadSafeSingleton instance;
+    private ThreadSafeSingleton(){}
+
+    public static ThreadSafeSingleton getInstance(){
+        if(instance == null){
+            synchronized(ThreadSafeSingleton.class){
+                if(instance == null){
+                   instance = new ThreadSafeSingleton();
+                }
+            }
+        }
+        return instance;
+     }
+}
+```
+
+
